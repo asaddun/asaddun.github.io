@@ -27,6 +27,7 @@
     color: #FFF;
     background-color: #555;
 }
+
 /* main content */
 .main {
     margin-left: 200px;
@@ -38,6 +39,9 @@ h1 {
 p {
     font-size: 18px;
     line-height: 1.5;
+}
+li {
+    font-size: 18px;
 }
 .menu {
     display: inline-block;
@@ -55,6 +59,7 @@ p {
     margin-left: 160px;
 }
 
+/* bottom nav */
 .bottomnav {
     position: fixed;
     bottom: 0;
@@ -67,7 +72,6 @@ p {
     align-items: center;
     padding-right: 20px;
 }
-
 .save-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -77,15 +81,28 @@ p {
     border-radius: 5px;
     cursor: pointer;
 }
-
 .save-button:hover {
     background-color: #45a049;
 }
-
+.manual-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.manual-button:hover {
+    background-color: #45a049;
+}
 .reset-button {
     display: block;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -94,7 +111,6 @@ p {
     border-radius: 5px;
     cursor: pointer;
 }
-
 .reset-button:hover {
     background-color: #b71a1a;
 }
