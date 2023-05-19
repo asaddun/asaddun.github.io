@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Automatic Pet Feeder</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+  <div class="sidenav">
+    <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+    <a href="/interval">Interval</a>
+    <a href="/time">Time</a>
+    <a href="/sensor">Sensor</a>
+    <a href="/manual">Manual</a>
+    <a href="/reset">Reset</a>
+  </div>
+  <div class="main">
+    <h1>Manual Method</h1>
+    <p>Device has successfully fed.</p>
+    <p>Redirecting to home page...</p>
+    <script>
+      function goBack() {
+        window.location.href = "/";
+      }
+      setTimeout(goBack, 5000);
+    </script>
+  </div>
+  </body>
+</html>
