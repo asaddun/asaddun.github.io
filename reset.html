@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My IoT Website</title>
+    <title>Automatic Pet Feeder</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qyy4vnh.png">
   </head>
   <body>
     <div class="sidenav">
@@ -10,20 +11,21 @@
         <a href="/interval.html">Interval</a>
         <a href="/time.html">Time</a>
         <a href="/sensor.html">Sensor</a>
+        <a href="/manual.html">Manual</a>
         <a href="/reset.html">Reset</a>
     </div>
     <div class="main">
-        <h1>Reset Device</h1>
-        <p>Reset saved WiFi and device setting?</p>
-        <button class="reset-button" onclick="confirmReset()">Reset</button>
-        <script>
-            function confirmReset() {
-              if (confirm("Are you sure you want to reset?")) {
-                window.location.href = "/submit.html";
-              } else {
-              }
-            }
-          </script>
+      <h1>Reset Device</h1>
+      <p>Reset saved WiFi and device setting?</p>
+      <button class="reset-button" onclick="confirmReset()">Reset</button>
+      <script>
+        function confirmReset() {
+          if (confirm("Are you sure you want to reset?")) {
+            window.location.href = "/doreset.html";
+          } else {
+          }
+        }
+      </script>
     </div>
   </body>
 </html>
