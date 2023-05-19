@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My IoT Website</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+    <div class="sidenav">
+      <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+      <a href="/interval.html">Interval</a>
+      <a href="/time.html">Time</a>
+      <a href="/sensor.html">Sensor</a>
+      <a href="/reset.html">Reset</a>
+    </div>
+    <div class="main">
+        <h1>Time Method</h1>
+        <form action="/submit.html">
+        <div class="menu">Time</div>
+        <div class="toggle">
+        <input type="checkbox" id="toggleBtn" onclick="toggleButton()">
+        <label for="toggleBtn"></label>
+        </div>
+        <input type="hidden" id="toggleValue" name="toggleTime">
+        <br>
+        <div class="menu">Time 1</div>
+        <div class="menu1">
+          <select id="hourSelect1" onchange="handleSelectChange1()">
+            <option value="0"></option>
+            <script>
+              for (let i = 0; i <= 23; i++) {
+                document.write(`<option value="${i.toString().padStart(2, '0')}">${i.toString().padStart(2, '0')}</option>`);
+              }
+            </script>
+          </select>
+          Hour
+          <select id="minuteSelect1" onchange="handleSelectChange1()">
+            <option value="0"></option>
+            <script>
+              for (let i = 0; i <= 59; i++) {
+                document.write(`<option value="${i.toString().padStart(2, '0')}">${i.toString().padStart(2, '0')}</option>`);
+              }
+            </script>
+          </select>
+          Minute
+        </div>
+        <input type="hidden" id="hourSelected1" name="hourSelected1">
+        <input type="hidden" id="minuteSelected1" name="minuteSelected1">
+        <br>
+        <div class="menu">Time 2</div>
+        <div class="menu1">
+          <select id="hourSelect2" onchange="handleSelectChange2()">
+            <option value="0"></option>
+            <script>
+              for (let i = 0; i <= 23; i++) {
+                document.write(`<option value="${i.toString().padStart(2, '0')}">${i.toString().padStart(2, '0')}</option>`);
+              }
+            </script>
+          </select>
+          Hour
+          <select id="minuteSelect2" onchange="handleSelectChange2()">
+            <option value="0"></option>
+            <script>
+              for (let i = 0; i <= 59; i++) {
+                document.write(`<option value="${i.toString().padStart(2, '0')}">${i.toString().padStart(2, '0')}</option>`);
+              }
+            </script>
+          </select>
+          Minute
+        </div>
+        <input type="hidden" id="hourSelected2" name="hourSelected2">
+        <input type="hidden" id="minuteSelected2" name="minuteSelected2">
+        <script>
+        function toggleButton() {
+            var toggleBtn = document.getElementById("toggleBtn");
+            var toggleValue = document.getElementById("toggleValue");
+            if (toggleBtn.checked) {
+              toggleValue.value = "1";
+            } else {
+              toggleValue.value = "0";
+            }
+            console.log(toggleValue);
+        }
+        function handleSelectChange1() {
+            var hour1 = document.getElementById("hourSelect1");
+            var minute1 = document.getElementById("minuteSelect1");
+
+            var selectedHour1 = hour1.options[hour1.selectedIndex].text;
+            var selectedMinute1 = minute1.options[minute1.selectedIndex].text;
+
+            var nameHour1 = document.getElementById("hourSelected1");
+            var nameMinute1 = document.getElementById("minuteSelected1");
+
+            nameHour1.value = selectedHour1;
+            nameMinute1.value = selectedMinute1;
+            
+            // var text1 = `Selected options1: ${selectedHour1} - ${selectedMinute1}`;
+            // console.log(nameHour1.name);
+            // console.log(nameMinute1.name);
+        }
+        function handleSelectChange2() {
+            var hour2 = document.getElementById("hourSelect2");
+            var minute2 = document.getElementById("minuteSelect2");
+            
+            var selectedHour2 = hour2.options[hour2.selectedIndex].text;
+            var selectedMinute2 = minute2.options[minute2.selectedIndex].text;
+
+            var nameHour2 = document.getElementById("hourSelected2");
+            var nameMinute2 = document.getElementById("minuteSelected2");
+
+            nameHour2.value = selectedHour2;
+            nameMinute2.value = selectedMinute2;
+            
+            // var text2 = `Selected options2: ${selectedHour2} - ${selectedMinute2}`;
+            // console.log(text2);
+        }
+        var button = document.getElementById("toggleBtn");
+        var value = document.getElementById("toggleValue");
+        if (button.checked) {
+        } else {
+        value.value = "0";
+        }
+        </script>
+    </div>
+    <div class="bottomnav">
+      <button class="save-button">Save</button>
+    </div>
+  </form>
+  </body>
+</html>

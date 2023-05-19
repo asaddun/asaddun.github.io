@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toggle Button Example</title>
+    <style>
+      /* Style for the toggle button */
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        margin-bottom: 10px;
+      }
+      .toggle input[type="checkbox"] {
+        display: none;
+      }
+      .toggle label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .toggle label:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: transform 0.3s ease-in-out;
+      }
+      .toggle input[type="checkbox"]:checked + label {
+        background-color: #69C77B;
+      }
+      .toggle input[type="checkbox"]:checked + label:after {
+        transform: translateX(26px);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="toggle">
+      <input type="checkbox" id="toggle-btn" onclick="toggleButton()">
+      <label for="toggle-btn"></label>
+    </div>
+    <br>
+    <input type="hidden" id="toggle-value" value="0">
+    <script>
+      function toggleButton() {
+        var button = document.getElementById("toggle-btn");
+        var value = document.getElementById("toggle-value");
+        if (button.checked) {
+          value.value = "1";
+        } else {
+          value.value = "0";
+        }
+        console.log(value.value);
+      }
+    </script>
+  </body>
+</html>

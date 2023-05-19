@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My IoT Website</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+    <div class="sidenav">
+      <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+        <a href="/interval.html">Interval</a>
+        <a href="/time.html">Time</a>
+        <a href="/sensor.html">Sensor</a>
+        <a href="/reset.html">Reset</a>
+      </div>
+      <div class="main">
+        <h1>Interval Method</h1>
+        <form action="/submit.html">
+        <div class="menu">Interval</div>
+        <div class="toggle">
+          <input type="checkbox" id="toggleBtn" onclick="toggleButton()">
+          <label for="toggleBtn"></label>
+        </div>
+        <input type="hidden" id="toggleValue" name="toggleInterval">
+        <br>
+        <div class="menu">Interval time</div>
+        <div class="menuInterval">
+          every
+          <input type="number" id="numberInterval" min="0" max="59" name="numberInterval">
+          <select id="intervalSelect" onchange="handleSelectChange()">
+            <option value="0"></option>
+            <option value="1">sec(s)</option>
+            <option value="2">min(s)</option>
+            <option value="3">hour(s)</option>
+          </select>
+        </div>
+      <input type="hidden" id="intervalSelected" name="intervalSelected">
+      <script>
+        function toggleButton() {
+            var toggleBtn = document.getElementById("toggleBtn");
+            var toggleValue = document.getElementById("toggleValue");
+            if (toggleBtn.checked) {
+              toggleValue.value = "1";
+            } else {
+              toggleValue.value = "0";
+            }
+            // console.log(toggleValue);
+        }
+        function handleSelectChange() {
+            var interval = document.getElementById("intervalSelect");
+            var numberInterval = document.getElementById("numberInterval");
+            var selectedInterval = interval.value;
+            if (selectedInterval == "3" && numberInterval.value >= 24) {
+              console.log("limit");
+              numberInterval.value = 23;
+            } else {
+              console.log("ok");
+            }
+
+            var nameInterval = document.getElementById("intervalSelected");
+
+            nameInterval.value = selectedInterval;
+            
+            // console.log(numberInterval.value);
+            // console.log(selectedInterval);
+        }
+        var button = document.getElementById("toggleBtn");
+        var value = document.getElementById("toggleValue");
+        if (button.checked) {
+        } else {
+        value.value = "0";
+        }
+      </script>
+    </div>
+    <div class="bottomnav">
+      <button class="save-button">Save</button>
+    </div>
+  </form>
+  </body>
+</html>

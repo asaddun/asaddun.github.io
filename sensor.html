@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My IoT Website</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+    <div class="sidenav">
+      <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+      <a href="/interval.html">Interval</a>
+      <a href="/time.html">Time</a>
+      <a href="/sensor.html">Sensor</a>
+      <a href="/reset.html">Reset</a>
+    </div>
+    <div class="main">
+        <h1>Sensor Method</h1>
+        <form action="/submit.html">
+        <div class="menu">Ultrasonic Sensor</div>
+        <div class="toggle">
+        <input type="checkbox" id="toggleBtn" onclick="toggleButton()">
+        <label for="toggleBtn"></label>
+        </div>
+        <input type="hidden" id="toggleValue" name="toggleSensor">
+        <script>
+        function toggleButton() {
+            var button = document.getElementById("toggleBtn");
+            var value = document.getElementById("toggleValue");
+            if (button.checked) {
+            value.value = "1";
+            } else {
+            value.value = "0";
+            }
+            // console.log(value.name);
+        }
+        var button = document.getElementById("toggleBtn");
+        var value = document.getElementById("toggleValue");
+        if (button.checked) {
+        } else {
+        value.value = "0";
+        }
+        </script>
+    </div>
+    <div class="bottomnav">
+      <button class="save-button" type="submit">Save</button>
+    </div>
+  </form>
+  </body>
+</html>
