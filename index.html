@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Automatic Pet Feeder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My IoT Website</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="icon" type="image/png" href="https://i.imgur.com/qyy4vnh.png">
   </head>
   <body>
-    <div class="sidenav">
+    <div id="mySidebar" class="sidebar">
+        <a class="closebtn" onclick="closeNav()">×</a>
         <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+        <br>
         <a href="/interval.html">Interval</a>
         <a href="/time.html">Time</a>
         <a href="/sensor.html">Sensor</a>
         <a href="/manual.html">Manual</a>
         <a href="/reset.html">Reset</a>
     </div>
+    <header>
+      <div class="toggle-sidebar" onclick="openNav()">☰</div>
+      <div class="title-section">Automatic Pet Feeder</div>
+    </header>
     <div class="main">
-      <h1>Automatic Pet Feeder</h1>
       <p>Automatic Pet Feeder. IoT device that can Automatically feed your pet.</p>
-      <p>Automatic Pet Feeder has 4 options to operate:</p>
-      <ol>
-      <li>Interval Method: Feed your pet in predetermined time intervals.</li>
-      <li>Time Method: Feed your pet at specific times that you set.</li>
-      <li>Sensor Method: Feed your pet whenever sensor is triggered (requires pet training).</li>
-      <li>Manual Method: You can manually feed your pet by pressing a button.</li>
-      </ol>
+      <p>Automatic Pet Feeder have 3 option to operate,<br>1. Interval Method: Feed your pet in predetermined time intervals.<br>2. Time Method: Gives you option want to feed your pet at the time you want.
+      <br>3. Sensor Method: Feed your pet whenever sensor is triggered (need to train your pet).</p>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
