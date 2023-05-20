@@ -19,7 +19,6 @@ header {
     font-weight: bold;
     color: white;
 }
-/* side bar */
 .sidebar {
     height: 100%;
     width: 0;
@@ -63,6 +62,11 @@ h1 {
     text-align: center;
 }
 p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333333;
+}
+ol{
     font-size: 18px;
     line-height: 1.5;
     color: #333333;
