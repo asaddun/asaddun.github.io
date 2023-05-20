@@ -126,7 +126,7 @@ p, ol {
 /* toggle button */
 .toggle {
     position: absolute;
-    top: 100px;
+    top: 95px;
     left: 327px;
     display: inline-block;
     width: 50px;
