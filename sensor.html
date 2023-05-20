@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Automatic Pet Feeder</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="icon" type="image/png" href="https://i.imgur.com/qyy4vnh.png">
   </head>
   <body>
-    <div class="sidenav">
-      <div class="title"><a href="/">Automatic Pet Feeder</a></div>
-      <a href="/interval.html">Interval</a>
-      <a href="/time.html">Time</a>
-      <a href="/sensor.html">Sensor</a>
-      <a href="/manual.html">Manual</a>
-      <a href="/reset.html">Reset</a>
+    <div id="mySidebar" class="sidebar">
+        <a class="closebtn" onclick="closeNav()">×</a>
+        <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+        <br>
+        <a href="/interval.html">Interval</a>
+        <a href="/time.html">Time</a>
+        <a href="/sensor.html">Sensor</a>
+        <a href="/manual.html">Manual</a>
+        <a href="/reset.html">Reset</a>
     </div>
+    <header>
+      <div class="toggle-sidebar" onclick="openNav()">☰</div>
+      <div class="title-section">Sensor Method</div>
+    </header>
     <div class="main">
-        <h1>Sensor Method</h1>
         <form action="/submit.html">
         <div class="menu">Ultrasonic Sensor</div>
         <div class="toggle">
@@ -23,24 +29,7 @@
         <label for="toggleBtn"></label>
         </div>
         <input type="hidden" id="toggleValue" name="toggleSensor">
-        <script>
-        function toggleButton() {
-            var button = document.getElementById("toggleBtn");
-            var value = document.getElementById("toggleValue");
-            if (button.checked) {
-            value.value = "1";
-            } else {
-            value.value = "0";
-            }
-            // console.log(value.name);
-        }
-        var button = document.getElementById("toggleBtn");
-        var value = document.getElementById("toggleValue");
-        if (button.checked) {
-        } else {
-        value.value = "0";
-        }
-        </script>
+        <script src="script.js"></script>
     </div>
     <div class="bottomnav">
       <button class="save-button" type="submit">Save</button>
