@@ -24,7 +24,11 @@
   <div class="main">
     <p>Device has successfully fed.</p>
     <p>Redirecting to home page...</p>
-    <script src="script.js">
+    <script src="script.js"></script>
+    <script>
+      function goBack() {
+          window.location.href = "/";
+      }
       setTimeout(goBack, 5000);
     </script>
   </div>
