@@ -62,3 +62,10 @@ function selectTime2() {
 function goBack() {
     window.location.href = "/";
 }
+
+function confirmReset() {
+    if (confirm("Are you sure you want to reset?")) {
+        window.location.href = "/doreset.html";
+    } else {
+    }
+}
