@@ -100,12 +100,27 @@ p, ol {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
 }
 .save-button:hover {
+    background-color: #419e46;
+}
+.manual-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.manual-button:hover {
     background-color: #419e46;
 }
 .reset-button {
