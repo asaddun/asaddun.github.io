@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Automatic Pet Feeder</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="icon" type="image/png" href="https://i.imgur.com/qyy4vnh.png">
   </head>
   <body>
-    <div class="sidenav">
+    <div id="mySidebar" class="sidebar">
+        <a class="closebtn" onclick="closeNav()">×</a>
         <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+        <br>
         <a href="/interval.html">Interval</a>
         <a href="/time.html">Time</a>
         <a href="/sensor.html">Sensor</a>
         <a href="/manual.html">Manual</a>
         <a href="/reset.html">Reset</a>
     </div>
+    <header>
+      <div class="toggle-sidebar" onclick="openNav()">☰</div>
+      <div class="title-section">Manual Method</div>
+    </header>
     <div class="main">
-      <h1>Manual Method</h1>
       <p>You can manually feed your pet by pressing the button.</p>
       <form action="/submitma.html">
         <input type="hidden" name="toggleManual" value="1">
