@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Automatic Pet Feeder</title>
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="icon" type="image/png" href="https://i.imgur.com/qyy4vnh.png">
   </head>
   <body>
-  <div class="sidenav">
-    <div class="title"><a href="/">Automatic Pet Feeder</a></div>
-    <a href="/interval.html">Interval</a>
-    <a href="/time.html">Time</a>
-    <a href="/sensor.html">Sensor</a>
-    <a href="/manual.html">Manual</a>
-    <a href="/reset.html">Reset</a>
-  </div>
+    <div id="mySidebar" class="sidebar">
+        <a class="closebtn" onclick="closeNav()">×</a>
+        <div class="title"><a href="/">Automatic Pet Feeder</a></div>
+        <br>
+        <a href="/interval.html">Interval</a>
+        <a href="/time.html">Time</a>
+        <a href="/sensor.html">Sensor</a>
+        <a href="/manual.html">Manual</a>
+        <a href="/reset.html">Reset</a>
+    </div>
+    <header>
+      <div class="toggle-sidebar" onclick="openNav()">☰</div>
+      <div class="title-section">Reset Device</div>
+    </header>
   <div class="main">
-    <h1>Reset Device</h1>
     <p>Device is resetting...</p>
     <p>Redirecting to home page...</p>
-    <script>
-      function goBack() {
-        window.location.href = "/";
-      }
+    <script src="script.js">
       setTimeout(goBack, 5000);
     </script>
   </div>
