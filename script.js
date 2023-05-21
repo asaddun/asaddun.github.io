@@ -58,3 +58,7 @@ function selectTime2() {
     nameHour2.value = selectedHour2;
     nameMinute2.value = selectedMinute2;
 }
+
+function goBack() {
+    window.location.href = "/";
+}
