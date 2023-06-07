@@ -65,7 +65,7 @@ function goBack() {
 
 function confirmReset() {
     if (confirm("Are you sure you want to reset?")) {
-        window.location.href = "/doreset.html";
+        window.location.href = "/doreset";
     } else {
     }
 }
