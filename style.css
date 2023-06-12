@@ -82,7 +82,7 @@ p, ol {
 }
 .menuTime {
     display: inline-block;
-    margin-left: 200px;
+    margin-left: 172px;
     color: #333333;
 }
 .bottomnav {
@@ -141,7 +141,7 @@ p, ol {
 /* toggle button */
 .toggle {
     position: absolute;
-    top: 95px;
+    top: 98px;
     left: 327px;
     display: inline-block;
     width: 50px;
@@ -199,13 +199,13 @@ p, ol {
         font-size: 15px;
     }
     .toggle{
-        top: 85px;
+        top: 83px;
         left: 175px;
     }
     .menuInterval{
         margin-left: 43px;
     }
     .menuTime{
-        margin-left: 97px;
+        margin-left: 62px;
     }
 }
