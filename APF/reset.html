@@ -3,20 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Automatic Pet Feeder</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/APF/style.css">
     <link rel="icon" type="image/png" href="https://i.imgur.com/qyy4vnh.png">
   </head>
   <body>
-    <div id="mySidebar" class="sidebar">
-        <a class="closebtn" onclick="closeNav()">×</a>
-        <div class="title"><a href="/">Automatic Pet Feeder</a></div>
-        <br>
-        <a href="/interval.html">Interval</a>
-        <a href="/time.html">Time</a>
-        <a href="/sensor.html">Sensor</a>
-        <a href="/manual.html">Manual</a>
-        <a href="/reset.html">Reset</a>
-    </div>
+    <script>
+      const includeDiv = async () => {
+        const response = await fetch('sidebar.html');
+        const divContent = await response.text();
+        document.getElementById('sidebar').innerHTML = divContent;
+      };
+  
+      includeDiv();
+    </script>
+    <div id="sidebar"></div>
     <header>
       <div class="toggle-sidebar" onclick="openNav()">☰</div>
       <div class="title-section">Reset Device</div>
